@@ -419,7 +419,6 @@
       },
       "resources": [
         {
-          "condition": "[equals(parameters('accept_eula'), 'Yes')]",
           "name": "[concat('tableau', copyIndex(1),'/CustomScript')]",
           "type": "Microsoft.Compute/virtualMachines/extensions",
           "location": "[parameters('location')]",
