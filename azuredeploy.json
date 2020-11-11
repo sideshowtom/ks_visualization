@@ -1,6 +1,16 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
+"outputs": {
+  "linuxscripturi": {
+    "type": "string",
+    "value": "[variables('linuxscripturi')]"
+  }
+ "LinCmdWrapper": {
+   "type": "string",
+   "value": "[variables('LinCmdWrapper')]"
+  }	
+},	
   "parameters": {
     "_artifactsLocation": {
       "type": "string",
