@@ -5,7 +5,7 @@
   "linuxscripturi": {
     "type": "string",
     "value": "[variables('linuxscripturi')]"
-  }
+  },
  "LinCmdWrapper": {
    "type": "string",
    "value": "[variables('LinCmdWrapper')]"
