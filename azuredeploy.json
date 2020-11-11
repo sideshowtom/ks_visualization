@@ -130,7 +130,7 @@
       "metadata": {
         "description": "Your current Country - to use for registering Tableau Server"
       }
-    },
+    }
   },
   "variables": {
     "virtualNetworkName": "TABVNET",
