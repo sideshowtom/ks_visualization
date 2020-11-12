@@ -23,21 +23,21 @@ done
 
 cd /tmp/
 
-echo '{
- \"zip\" : \"$ZIP\",
- \"country\" : \"$COUNTRY\",
- \"city\" : \"$CITY\",
- \"industry\" : \"$INDUSTRY\",
- \"eula\" : \"['trial']\",
- \"title\" : \"$TITLE\",
- \"phone\" : \"$PHONE\",
- \"company\" : \"$COMPANY\",
- \"state\" : \"$STATE\",
- \"department\" : \"$DEPARMENT\",
- \"first_name\" : \"$FIRST_NAME\",
- \"last_name\" : \"$LAST_NAME\",
- \"email\" : \"$EMAIL\"
-}' >> registration.json
+echo {
+ zip : $ZIP,
+ country : $COUNTRY,
+ city : $CITY,
+ industry : $INDUSTRY,
+ eula : [\"trial\"],
+ title : $TITLE,
+ phone : $PHONE,
+ company : $COMPANY,
+ state : $STATE,
+ department : $DEPARMENT,
+ first_name : $FIRST_NAME,
+ last_name : $LAST_NAME,
+ email : $EMAIL
+} >> registration.json
 
 echo '{
   "configEntities": {
