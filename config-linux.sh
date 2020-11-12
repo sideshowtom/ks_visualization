@@ -54,12 +54,12 @@ sudo apt-get -y install gdebi-core
 wget https://downloads.tableau.com/esdalt/2020.3.2/tableau-server-2020-3-2_amd64.deb
 sudo gdebi -n tableau-server-2020-3-2_amd64.deb
 sudo /opt/tableau/tableau_server/packages/scripts.20203.20.1018.2303/initialize-tsm -a $USER --accepteula --debug
-su $USER
-tsm licenses activate --trial
-tsm register -f registration.json
-tsm settings import -f config.json
-tsm pending-changes apply
-tsm initialize
+
+sudo -u $USER tsm licenses activate --trial
+sudo -u $USER tsm register -f registration.json
+sudo -u $USER tsm settings import -f config.json
+sudo -u $USER tsm pending-changes apply
+sudo -u $USER tsm initialize
 
 #rm registration.json
 #rm tableau-server-2020-3-2_amd64.deb
