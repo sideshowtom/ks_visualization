@@ -55,11 +55,11 @@ wget https://downloads.tableau.com/esdalt/2020.3.2/tableau-server-2020-3-2_amd64
 sudo gdebi -n tableau-server-2020-3-2_amd64.deb
 sudo /opt/tableau/tableau_server/packages/scripts.20203.20.1018.2303/initialize-tsm -a $USER --accepteula --debug
 
-sudo -u $USER /usr/share/bash-completion/completions/tsm licenses activate --trial
-sudo -u $USER /usr/share/bash-completion/completions/tsm register -f registration.json
-sudo -u $USER /usr/share/bash-completion/completions/tsm settings import -f config.json
-sudo -u $USER /usr/share/bash-completion/completions/tsm pending-changes apply
-sudo -u $USER /usr/share/bash-completion/completions/tsm initialize
+sudo /opt/tableau/tableau_server/packages/bin.20203.20.1018.2303/tsm licenses activate --trial
+sudo /opt/tableau/tableau_server/packages/bin.20203.20.1018.2303/tsm register -f registration.json
+sudo /opt/tableau/tableau_server/packages/bin.20203.20.1018.2303/tsm settings import -f config.json
+sudo /opt/tableau/tableau_server/packages/bin.20203.20.1018.2303/tsm pending-changes apply
+sudo /opt/tableau/tableau_server/packages/bin.20203.20.1018.2303/tsm initialize
 
 #rm registration.json
 #rm tableau-server-2020-3-2_amd64.deb
