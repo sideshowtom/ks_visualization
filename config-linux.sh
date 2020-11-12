@@ -56,9 +56,7 @@ sudo gdebi -n tableau-server-2020-3-2_amd64.deb
 sudo /opt/tableau/tableau_server/packages/scripts.20203.20.1018.2303/initialize-tsm --accepteula
 
 tsm licenses activate --trial
-tsm pending-changes apply
 tsm register -f registration.json
-tsm pending-changes apply
 tsm settings import -f config.json
 tsm pending-changes apply
 tsm initialize
