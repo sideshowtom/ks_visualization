@@ -28,7 +28,7 @@ echo "{
  \"country\" : \"$COUNTRY\",
  \"city\" : \"$CITY\",
  \"industry\" : \"$INDUSTRY\",
- \"eula\" : [\"trial\"],
+ \"eula\" : \"[\'trial\']\",
  \"title\" : \"$TITLE\",
  \"phone\" : \"$PHONE\",
  \"company\" : \"$COMPANY\",
