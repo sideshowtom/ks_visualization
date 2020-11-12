@@ -55,11 +55,13 @@ wget https://downloads.tableau.com/esdalt/2020.3.2/tableau-server-2020-3-2_amd64
 sudo gdebi -n tableau-server-2020-3-2_amd64.deb
 sudo /opt/tableau/tableau_server/packages/scripts.20203.20.1018.2303/initialize-tsm --accepteula
 
-tsm licenses activate --trial
-tsm register -f registration.json
-tsm settings import -f config.json
-tsm pending-changes apply
-tsm initialize
+DEBIAN_FRONTEND=noninteractive tsm licenses activate --trial
+DEBIAN_FRONTEND=noninteractive tsm pending-changes apply
+DEBIAN_FRONTEND=noninteractive tsm register -f registration.json
+DEBIAN_FRONTEND=noninteractive tsm pending-changes apply
+DEBIAN_FRONTEND=noninteractive tsm settings import -f config.json
+DEBIAN_FRONTEND=noninteractive tsm pending-changes apply
+DEBIAN_FRONTEND=noninteractive tsm initialize
 
 #rm registration.json
 #rm tableau-server-2020-3-2_amd64.deb
