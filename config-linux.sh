@@ -56,8 +56,8 @@ sudo gdebi -n tableau-server-2020-3-2_amd64.deb
 sudo /opt/tableau/tableau_server/packages/scripts.20203.20.1018.2303/initialize-tsm -a $USER --accepteula --debug
 
 sudo /opt/tableau/tableau_server/packages/bin.20203.20.1018.2303/tsm licenses activate --trial
-sudo /opt/tableau/tableau_server/packages/bin.20203.20.1018.2303/tsm register -f registration.json
-sudo /opt/tableau/tableau_server/packages/bin.20203.20.1018.2303/tsm settings import -f config.json
+sudo /opt/tableau/tableau_server/packages/bin.20203.20.1018.2303/tsm register -f /tmp/registration.json
+sudo /opt/tableau/tableau_server/packages/bin.20203.20.1018.2303/tsm settings import -f /tmp/config.json
 sudo /opt/tableau/tableau_server/packages/bin.20203.20.1018.2303/tsm pending-changes apply
 sudo /opt/tableau/tableau_server/packages/bin.20203.20.1018.2303/tsm initialize
 
