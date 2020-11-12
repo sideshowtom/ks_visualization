@@ -61,6 +61,6 @@ tsm settings import -f config.json
 tsm pending-changes apply
 tsm initialize
 
-rm registration.json
-rm tableau-server-2020-3-2_amd64.deb
-rm config.json
+#rm registration.json
+#rm tableau-server-2020-3-2_amd64.deb
+#rm config.json
