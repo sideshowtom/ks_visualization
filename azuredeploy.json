@@ -427,8 +427,21 @@
           ]
         }
       },
-      "resources": [
-              
+      "resources": [	      
+         {
+           "name": "[concat('tableau', copyIndex(1),'/CustomScript')]",
+           "type": "Microsoft.Compute/virtualMachines/extensions",
+           "location": "[parameters('location')]",
+           "apiVersion": "2019-07-01",
+           "dependsOn": [
+             "[resourceId('Microsoft.Compute/virtualMachines', concat('tableau', copyIndex(1)))]"
+           ],
+           "tags": {
+             "displayName": "customscriptextension"
+           },
+           "properties":
+             "[variables('lin_CSE_properties')]"
+         }      
       ]
     }
   ]
