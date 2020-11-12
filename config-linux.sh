@@ -53,14 +53,15 @@ sudo apt-get update
 sudo apt-get -y install gdebi-core
 wget https://downloads.tableau.com/esdalt/2020.3.2/tableau-server-2020-3-2_amd64.deb
 sudo gdebi -n tableau-server-2020-3-2_amd64.deb
-sudo /opt/tableau/tableau_server/packages/scripts.20203.20.1018.2303/initialize-tsm -a $USER --accepteula --debug
+TABLEAU_SCRIPTS_DIR=/opt/tableau/tableau_server/packages/scripts.20203.20.1018.2303
+sudo $TABLEAU_SCRIPTS_DIR/initialize-tsm -a $USER --accepteula --debug
 
-sudo /opt/tableau/tableau_server/packages/bin.20203.20.1018.2303/tsm licenses activate --trial
-sudo /opt/tableau/tableau_server/packages/bin.20203.20.1018.2303/tsm register -f /tmp/registration.json
-sudo /opt/tableau/tableau_server/packages/bin.20203.20.1018.2303/tsm pending-changes apply
-sudo /opt/tableau/tableau_server/packages/bin.20203.20.1018.2303/tsm settings import -f /tmp/config.json
-sudo /opt/tableau/tableau_server/packages/bin.20203.20.1018.2303/tsm pending-changes apply
-sudo /opt/tableau/tableau_server/packages/bin.20203.20.1018.2303/tsm initialize
+sudo $TABLEAU_SCRIPTS_DIR/tsm licenses activate --trial
+sudo $TABLEAU_SCRIPTS_DIR/tsm register -f /tmp/registration.json
+sudo $TABLEAU_SCRIPTS_DIR/tsm pending-changes apply
+sudo $TABLEAU_SCRIPTS_DIR/tsm settings import -f /tmp/config.json
+sudo $TABLEAU_SCRIPTS_DIR/tsm pending-changes apply
+sudo $TABLEAU_SCRIPTS_DIR/tsm initialize
 
 #rm registration.json
 #rm tableau-server-2020-3-2_amd64.deb
