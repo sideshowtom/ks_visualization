@@ -23,7 +23,7 @@ done
 
 cd /tmp/
 
-echo {
+echo "{
  zip : $ZIP,
  country : $COUNTRY,
  city : $CITY,
@@ -37,7 +37,7 @@ echo {
  first_name : $FIRST_NAME,
  last_name : $LAST_NAME,
  email : $EMAIL
-} >> registration.json
+}" >> registration.json
 
 echo '{
   "configEntities": {
