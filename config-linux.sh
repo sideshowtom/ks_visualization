@@ -63,4 +63,4 @@ tsm initialize
 
 rm registration.json
 rm tableau-server-2020-3-2_amd64.deb
-rm config.sh
+rm config.json
