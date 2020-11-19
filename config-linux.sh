@@ -64,7 +64,7 @@ sudo $TABLEAU_EXE_DIR/tsm register -f /tmp/registration.json
 sudo $TABLEAU_EXE_DIR/tsm pending-changes apply
 sudo $TABLEAU_EXE_DIR/tsm settings import -f /tmp/config.json
 sudo $TABLEAU_EXE_DIR/tsm pending-changes apply
-#sudo $TABLEAU_EXE_DIR/tsm initialize
+sudo $TABLEAU_EXE_DIR/tsm initialize
 
 #rm registration.json
 #rm tableau-server-2020-3-2_amd64.deb
