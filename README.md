@@ -7,7 +7,7 @@ To deploy this to Azure and use your domain name and SSL certificate:
 
 Buy or have ready a domain name and SSL certificate
 
-Create an empty resource group in you Azure account
+Create an empty resource group in your Azure account
 
 Deploy the Azure template with the button above, you will need to fill out some fields
 
