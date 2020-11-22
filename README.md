@@ -26,48 +26,48 @@ if you've done this before, you may already have your domain name in your known_
 ssh-keygen -f "/home/<your user name>/.ssh/known_hosts" -R "<your domain name>
 )
 
-ssh-copy-id <vm user name>@<your domain name>.xxx
+ssh-copy-id vm-user-name\@your-domain-name
 
 It will ask you to verify the server.  If the IP address matches, say yes. Then it will prompt you for your VM user password.
 
 After that you can type:
 
-ssh <vm user name>@<your domain name>.xxx
+ssh vm-user-name\@your-domain-name
 
 from a terminal window to get to a command line on the VM.
 
 Now you can start to get the SSL certificate installed.  From the command line on the VM:
 
-openssl genrsa -out <cert file name>.key 4096
+openssl genrsa -out cert-file-name.key 4096
 
 then
 
- openssl req -new -key <cert file name>.key -out <cert file name>.csr
+ openssl req -new -key cert-file-name.key -out cert-file-name.csr
 
 then, give the .csr file (certificate signing request file) to your SSL certificate vendor, and they will give you back if two .crt files, the larger of which is the key chain file
 
 Then, from the command line on the VM:
 
-tsm security external-ssl enable --cert-file <path to cert file.crt> --key-file <path to key file.key> --chain-file <path to chain file.crt>
+tsm security external-ssl enable --cert-file path-to-cert-file.crt> --key-file path-to-key-file.key --chain-file path-to-chain-file.crt
 
 then,
 
-tsm authentication trusted configure -th https://<your domain name>.xxx
+tsm authentication trusted configure -th https://your-domain-name
 
-Then, open a browser and go to https://<your domain name>.xxx:8850.  You will get a warning that the SSL certificate is not trusted because it is self signed by Tableau, but you can accept the risk and proceed past it.  Then login to Tableau Services Manager as the vm admin user.  There in tableau services manager in the browser, you can apply the pending changes and start the server on the upper right
+Then, open a browser and go to https://your-domain-name:8850.  You will get a warning that the SSL certificate is not trusted because it is self signed by Tableau, but you can accept the risk and proceed past it.  Then login to Tableau Services Manager as the vm admin user.  There in tableau services manager in the browser, you can apply the pending changes and start the server on the upper right
 
 once all 33 services are started...
 
 then from the command line in the VM:
 
-tabcmd initialuser --server https://localhost --username '<tableau server admin name>' --no-certcheck
+tabcmd initialuser --server https://localhost --username 'tableau-server-admin-name' --no-certcheck
 
 It will prompt you for a password.  This will be the tableau server administrator password.
 
 Now you can go to your Tableau server (different from the Tableau Services Manager)
-https://<your domain name>.xxx
+https://your-domain-name
 and by not including the port number it defaults to 443 since its SSL.
-You can log in there with '<tableau server admin name>' and its password.
+You can log in there with 'tableau-server-admin-name' and its password.
 
 Now you should have two browser tabs open, one for Tableau Server and one for Tableau Services Manager.
 
