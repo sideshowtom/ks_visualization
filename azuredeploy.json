@@ -7,7 +7,7 @@
       "metadata": {
           "description": "The base URI where artifacts required by this template are located including a trailing '/'"
       },
-      "defaultValue": "https://raw.githubusercontent.com/sideshowtom/ks_visualization/main/"
+      "defaultValue": "https://raw.githubusercontent.com/sideshowtom/ks_visualization/development/"
     },
     "location": {
       "type": "string",
