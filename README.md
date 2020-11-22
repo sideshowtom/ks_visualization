@@ -48,7 +48,7 @@ then, give the .csr file (certificate signing request file) to your SSL certific
 
 Then, from the command line on the VM:
 
-tsm security external-ssl enable --cert-file path-to-cert-file.crt> --key-file path-to-key-file.key --chain-file path-to-chain-file.crt
+tsm security external-ssl enable --cert-file path-to-cert-file.crt --key-file path-to-key-file.key --chain-file path-to-chain-file.crt
 
 then,
 
