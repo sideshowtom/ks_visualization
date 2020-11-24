@@ -44,7 +44,7 @@ then
 
  openssl req -new -key cert-file-name.key -out cert-file-name.csr
 
-then, give the .csr file (certificate signing request file) to your SSL certificate vendor, and they will give you back if two .crt files, the larger of which is the key chain file
+then, give the .csr file (certificate signing request file) to your SSL certificate vendor, and they will give you back two .crt files, the larger of which is the key chain file
 
 Then, from the command line on the VM:
 
