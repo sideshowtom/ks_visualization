@@ -5,7 +5,7 @@
 
 To deploy this to Azure and use your domain name and SSL certificate:
 
-Buy or have ready a domain name and SSL certificate
+Choose a domain name vendor and an SSL/TLS certificate vendor.
 
 Create an empty resource group in your Azure account
 
