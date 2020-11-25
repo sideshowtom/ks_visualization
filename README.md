@@ -71,3 +71,5 @@ You can log in there with 'tableau-server-admin-name' and its password.
 
 Now you should have two browser tabs open, one for Tableau Server and one for Tableau Services Manager.
 
+You can restrict traffic to the VM to specific IP addresses or lists or ranges of IP addresses with the inbound port rules in the network interface for the VM.  This can be done in the Azure portal.
+
