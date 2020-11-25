@@ -22,10 +22,8 @@ You may have to wait until the domain name/ip address matching is set up and pro
 
 To get to a command line on the VM, from a terminal window do:
 
-(
-if you've done this before, you may already have your domain name in your known_hosts, and you'll have to remove it or you'll get a nasty warning when you try to do ssh-copy-id to a known_host.  To remove it, do
-ssh-keygen -f "/home/your-user-name/.ssh/known_hosts" -R "your-domain-name"
-)
+(if you've done this before, you may already have your domain name in your known_hosts, and you'll have to remove it or you'll get a nasty warning when you try to do ssh-copy-id to a known_host.  To remove it, do
+ssh-keygen -f "/home/your-user-name/.ssh/known_hosts" -R "your-domain-name")
 
 ssh-copy-id vm-user-name\@your-domain-name
 
