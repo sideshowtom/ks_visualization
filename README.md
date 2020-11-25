@@ -4,7 +4,7 @@
 
 This is based on https://github.com/Azure/azure-quickstart-templates/tree/master/tableau-server-single-node, but is specific to Linux
 
-To deploy this to Azure and use your domain name and SSL certificate:
+**To deploy this to Azure and use your domain name and SSL certificate:**
 
 Choose a domain name vendor and an SSL/TLS certificate vendor.
 
