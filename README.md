@@ -59,7 +59,7 @@ once all 33 services are started...
 
 then from the command line in the VM:
 
-*tabcmd initialuser --server https://localhost --username 'tableau-server-admin-name' --no-certcheck*
+*tabcmd initialuser --server http://localhost --username 'tableau-server-admin-name' --no-certcheck*
 
 It will prompt you for a password.  This will be the tableau server administrator password.
 
