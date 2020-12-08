@@ -51,10 +51,10 @@ wait
 
 sudo apt-get update
 sudo apt-get -y install gdebi-core
-wget https://downloads.tableau.com/esdalt/2020.3.2/tableau-server-2020-3-2_amd64.deb
-sudo gdebi -n tableau-server-2020-3-2_amd64.deb
+wget https://downloads.tableau.com/esdalt/2020.3.3/tableau-server-2020-3-3_amd64.deb
+sudo gdebi -n tableau-server-2020-3-3_amd64.deb
 TABLEAU_PACKAGES_DIR=/opt/tableau/tableau_server/packages
-TABLEAU_VER_STRING=20203.20.1018.2303
+TABLEAU_VER_STRING=20203.20.1110.1623
 TABLEAU_SCRIPTS_DIR=$TABLEAU_PACKAGES_DIR/scripts.$TABLEAU_VER_STRING
 sudo $TABLEAU_SCRIPTS_DIR/initialize-tsm -a $USER --accepteula --debug
 
