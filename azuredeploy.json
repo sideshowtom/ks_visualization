@@ -19,7 +19,7 @@
     "OS": {
       "type": "string",
       "allowedValues": [
-        "Ubuntu 16.04 LTS"
+        "Ubuntu 18.04 LTS"
       ],
       "metadata": {
         "description": "The operating system of the VM."
@@ -27,11 +27,11 @@
     },
     "tableau_version": {
       "type": "string",
-      "allowedValues": ["2020.3.2"],
+      "allowedValues": ["2020.3.3"],
       "metadata": {
         "description": "The version of Tableau Server to install."
       },
-      "defaultValue": "2020.3.2"
+      "defaultValue": "2020.3.3"
     },
     "VMSize": {
       "type": "string",
@@ -142,14 +142,14 @@
     "numberOfInstances": 1,
     "virtualMachineSize": "[parameters('VMSize')]",
     "linux_os": [
-      "Ubuntu 16.04 LTS"
+      "Ubuntu 18.04 LTS"
     ],
     "os_is_linux": "[contains(variables('linux_os'),parameters('OS'))]", //true if linux
     "imageReference": {
-      "Ubuntu 16.04 LTS": {
+      "Ubuntu 18.04 LTS": {
         "publisher": "Canonical",
         "offer": "UbuntuServer",
-        "sku": "16.04.0-LTS",
+        "sku": "18.04.0-LTS",
         "version": "latest"
       }
     },
