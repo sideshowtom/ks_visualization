@@ -149,7 +149,7 @@
       "Ubuntu 18.04 LTS": {
         "publisher": "Canonical",
         "offer": "UbuntuServer",
-        "sku": "18.04.0-LTS",
+        "sku": "18.04.5-LTS",
         "version": "latest"
       }
     },
